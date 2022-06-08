@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css"> 
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+</head>
+<body>
+<nav>
+  <a href="#" class="brand"><img src="/images/logo.svg" alt="logo"></a>
+  <a href="#" class="ham">
+    <img src="/images/icon-menu.svg" alt="open-menu">
+  </a>
+  
+
+  <div class="nav-ul">
+    <div class="dropdown">
+      <a class="dropbtn">
+        Features <img src="/images/icon-arrow-up.svg" alt="Arrow up">
+      </a>
+        <div class="dropdown-content">
+          <a href="#"><img src="/images/icon-todo.svg" alt="">todolist</a>
+          <a href="#"><img src="/images/icon-calendar.svg" alt="">calender</a>
+          <a href="#"><img src="/images/icon-reminders.svg" alt="">reminders</a>
+          <a href="#"><img src="/images/icon-planning.svg" alt="">planning</a>
+        </div>
+    </div>
+  
+    <div class="dropdown">
+      <a class="dropbtn">
+        company <img src="/images/icon-arrow-up.svg" alt="Arrow up">
+      </a>
+      <div class="dropdown-content">
+        <a href="#">history</a>
+        <a href="#">Our Heam</a>
+        <a href="#">Blog</a>
+      </div>
+    </div>
+    <a href="#">Careers</a>
+    <a href="#">About</a>
+  </div>
+ 
+  <div class="nav-btn">
+    <button>Login</button>
+    <button>Register</button>
+  </div>
+
+</div>
+</nav>
+
+<div class="overlay">
+  <div class="mobile-nav">
+    <img src="/images/icon-close-menu.svg" id="close-menu">
+    <div class="mobile-nav-con">
+      <div class="dropdown">
+        <div class="dropbtn">
+          Features <img src="/images/icon-arrow-up.svg" alt="Arrow up">
+          </div>
+          <div class="dropdown-content">
+            <a href="#"><img src="/images/icon-todo.svg" alt="">todolist</a>
+            <a href="#"><img src="/images/icon-calendar.svg" alt="">calender</a>
+            <a href="#"><img src="/images/icon-reminders.svg" alt="">reminders</a>
+            <a href="#"><img src="/images/icon-planning.svg" alt="">planning</a>
+          </div>
+      </div>
+      <div class="dropdown">
+        <div class="dropbtn">
+          Company <img src="/images/icon-arrow-up.svg" alt="Arrow up">
+        </div>
+        <div class="dropdown-content">
+          <a href="#">History</a>
+          <a href="#">Our Team</a>
+          <a href="#">Blog</a>
+        </div>
+      </div>
+      <a href="#">Careers</a>
+      <a href="#">About</a>
+    </div>
+   
+  </div>
+</div>
+
+<div class="hero">
+  <div class="hero-text">
+    <h1>Make <br/> remote work</h1>
+    <p>
+      Get your team in sync, no matter your location. Streamline processes,
+      create team rituals, and watch productivity soar.
+    </p>
+    <button>Learn More</button>
+    <div class="logos">
+      <img src="/images/client-audiophile.svg" alt="">
+      <img src="/images/client-databiz.svg" alt="">
+      <img src="/images/client-maker.svg" alt="">
+      <img src="/images/client-meet.svg" alt="">
+    </div>
+  </div>
+  <div class="img-container">
+    <img src="/images/image-hero-desktop.png" id="hero-img" alt="">
+  </div>
+</div>
+
+<script>
+  const ham = document.querySelector('.ham')
+
+  ham.addEventListener('click', e=>{
+    document.querySelector('.mobile-nav').classList.add('show')
+    document.querySelector('.overlay').style.display = 'block'
+    document.querySelector('body').classList.add('lock')
+  })
+  document.querySelector('#close-menu').addEventListener('click', e=>{
+    document.querySelector('.mobile-nav').classList.remove('show')
+    document.querySelector('.overlay').style.display ='none'
+    document.querySelector('body').classList.remove('lock')
+  })
+</script>
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Odesanya Babajide</a>.
+  </div>
+</body>
+</html>
